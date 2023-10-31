@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <crow.h>
+#include <opencv2/opencv.hpp>
 
 std::vector<crow::websocket::connection*> connections;
 
