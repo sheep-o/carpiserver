@@ -3,7 +3,7 @@ CFLAGS := -Wall -g -Iinclude/ -I/opt/homebrew/Cellar/boost/1.83.0/include -I/opt
 TARGET := server
 
 LIBPATHS :=
-LIBS := $(pkg-config --libs opencv4)
+LIBS := $(shell pkg-config --libs opencv4)
 
 SRCS := $(wildcard *.cpp)
 OBJS := $(patsubst %.cpp, %.o, $(SRCS))

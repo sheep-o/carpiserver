@@ -5,6 +5,8 @@
 #include <crow.h>
 #include <opencv2/opencv.hpp>
 
+using namespace cv;
+
 std::vector<crow::websocket::connection*> connections;
 
 void ws_on_open(crow::websocket::connection& conn) {
@@ -18,9 +20,8 @@ void ws_on_close(crow::websocket::connection& conn, const std::string& reason) {
 }
 
 void ws_on_message(crow::websocket::connection& conn, const std::string& data, bool is_binary) {
-    if (is_binary) {
-        std::cout << data << std::endl;
-    }
+    std::vector<char> data_vec(data.begin(), data.end());
+    Mat img = imdecode(data_vec, IMREAD_GRAYSCALE);
 }
 
 int main() {
