@@ -1,5 +1,5 @@
 CC := g++
-CFLAGS := -Wall -g -Iinclude/ -I/opt/homebrew/Cellar/boost/1.81.0_1/include -I/System/Volumes/Data/opt/homebrew/include/ -std=c++20
+CFLAGS := -Wall -g -Iinclude/ -I/opt/homebrew/Cellar/boost/1.83.0/include -I/opt/homebrew/Cellar/boost/1.81.0_1/include -I/System/Volumes/Data/opt/homebrew/include/ -std=c++20
 TARGET := server
 
 LIBPATHS :=
