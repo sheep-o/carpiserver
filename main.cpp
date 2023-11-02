@@ -246,11 +246,10 @@ void ws_on_message(crow::websocket::connection& conn, const std::string& data, b
 
     image = drawLanes(edges, lines);
 
-    // Show the result
-//    imshow("Lane Detection", image);
- //   waitKey(0);
-
     imwrite("test.png", image);
+
+    // tell esp32 to turn 90 degrees
+    conn.send_text("90");
 }
 
 int main() {
