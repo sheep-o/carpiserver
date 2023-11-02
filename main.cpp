@@ -247,8 +247,8 @@ void ws_on_message(crow::websocket::connection& conn, const std::string& data, b
     image = drawLanes(edges, lines);
 
     // Show the result
-    imshow("Lane Detection", image);
-    waitKey(0);
+//    imshow("Lane Detection", image);
+ //   waitKey(0);
 
     imwrite("test.png", image);
 }
